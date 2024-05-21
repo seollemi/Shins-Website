@@ -1,0 +1,349 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shin's</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="shins.css">
+    <style>
+        body{
+            background-color: rgb(164, 231, 240);
+        }
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000; /* Ensures it stays on top of other elements */
+            background-color: white; /* Ensure it has a background */
+            border-bottom: 1px solid #ddd; /* Optional: Adds a subtle border */
+        }
+
+        .shadow{
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            border-radius: 20px;
+            
+        }
+        .card{
+            border-radius: 20px;
+        }
+        
+        .card-title h2 {
+            font-size: 1.5rem; /* Adjust font size as needed */
+        }
+        .card-text {
+            flex-grow: 1;
+        }
+        .card img {
+            max-height: 270px;
+            object-fit: cover;
+            border-radius: 20px 20px 0px 0px;
+        }
+        .card-body {
+            padding-bottom: 60px; /* Adjust based on button height */
+            position: relative;
+        }
+
+        .btn {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            right: 10px;
+        }
+        h2{
+            text-align: center;
+        }
+        h3 {
+            font-size: 20px;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+    /* Add these styles below the existing styles in the <style> section */
+
+        .card-list {
+            list-style-type: none;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        .card-list > li {
+            background-color: #fff;
+            border-radius: 5px;
+        }
+
+        .card-list > li > ul {
+            margin-top: 0px;
+            padding-left: 20px;
+        }
+
+        .card-list > li > ul > li {
+            background: none;
+            border: none;
+            padding: 0;
+            box-shadow: none;
+        }
+
+        strong {
+            color: #0073e6;
+        }
+
+        footer{
+            background-color: white;
+        }
+        
+    </style>
+</head>
+<body>
+    <nav class="sticky-nav">
+        <ul class="sidebar">
+            <li onclick="closeSB()"><a><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="black"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" href="#" role="button" id="productsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    Menu
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+                    <li><a class="dropdown-item" href="Products.html#Rice">Rice Meal</a></li>
+                    <li><a class="dropdown-item" href="Products.html#Frap">Frappe</a></li>
+                    <li><a class="dropdown-item" href="Products.html#Brew">Brewed Coffee</a></li>
+                    <li><a class="dropdown-item" href="Products.html#Hot">Hot Chocolate</a></li>
+                    <li><a class="dropdown-item" href="Products.html#Cold">Cold Drinks</a></li>
+                    <li><a class="dropdown-item" href="Products.html#Milk">Milk Tea</a></li>
+                    <li><a class="dropdown-item" href="Products.html#Snac">Snacks</a></li>    
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="Products.html#Gz">Grazing Table</a></li>
+                </ul>
+            </li>
+            <li><a href="personnel.html">Personnel</a></li>
+            <li><a href="ContactUs.html">Contact us</a></li>
+            <li><a href="carrer.html">Careers</a></li>
+            <li><a href="reviews_blog.html">Reviews</a></li>
+        </ul>
+
+        <ul>
+            <li class="logo-and-text">
+                <img src="./Images/shin logo.jpg" alt="">
+            </li>
+            <li class="hideOnMobile"><a href="index.html">Home</a></li>
+            <li class="hideOnMobile"><a href="about.html">About us</a></li>
+            <li class="hideOnMobile dropdown">
+                <a class="dropdown-toggle" href="#" role="button" id="productsDropdownDesktop" data-bs-toggle="dropdown" aria-expanded="false">
+                    Menu
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="productsDropdownDesktop">
+                    <li><a class="dropdown-item" href="Products.html#Rice">Rice Meal</a></li>
+                    <li><a class="dropdown-item" href="Products.html#Frap">Frappe</a></li>
+                    <li><a class="dropdown-item" href="Products.html#Brew">Brewed Coffee</a></li>
+                    <li><a class="dropdown-item" href="Products.html#Hot">Hot Chocolate</a></li>
+                    <li><a class="dropdown-item" href="Products.html#Cold">Cold Drinks</a></li>
+                    <li><a class="dropdown-item" href="Products.html#Milk">Milk Tea</a></li>
+                    <li><a class="dropdown-item" href="Products.html#Snac">Snacks</a></li>    
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="Products.html#Gz">Grazing Table</a></li>
+                </ul>
+            </li>
+            <li class="hideOnMobile"><a href="personnel.html">Personnel</a></li>
+            <li class="hideOnMobile"><a href="ContactUs.html">Contact us</a></li>
+            <li class="hideOnMobile"><a href="carrer.html">Careers</a></li>
+            <li class="hideOnMobile"><a href="reviews_blog.html">Reviews</a></li>
+            <li class="menu-button" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="black"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+    <div class="text-center my-5">
+        <h1>Carrers and Job Openings</h1>
+        <hr/>
+    </div>
+
+        <div class="row">
+            
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="shadow">
+                <div class="card mb-5 shadow-sm">
+                    <img src="Images/cashier.jpg" class="img-fluid" alt="Cashier">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h2>Want to be part of the team? As a Cashier</h2>
+                        </div>
+                        <div class="card-text">
+                            <p>
+                                <h3>Requirements for a Cashier</h3>
+                                <ul class="card-list">
+                                    <li><strong>Education</strong>: High school diploma or equivalent.</li>
+                                    <li><strong>Skills</strong>:
+                                        <ul>
+                                            <li>Basic math skills.</li>
+                                            <li>Good customer service skills.</li>
+                                            <li>Attention to detail.</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Personal Qualities</strong>:
+                                        <ul>
+                                            <li>Honest and trustworthy.</li>
+                                            <li>Friendly and polite.</li>
+                                            <li>Reliable and punctual.</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Physical Ability</strong>: Ability to stand for long periods.</li>
+                                    <li><strong>Documents</strong>: NBI Clearance, Police Clearance</li>
+                                </ul>
+                            </p>
+                        </div>
+                        <a href="#" class="btn btn-outline-primary">Apply Now</a>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="shadow">
+                <div class="card mb-5 shadow-sm">
+                    <img src="Images/cook.jpg" class="img-fluid" alt="Cook">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h2>Want to be part of the team? As a Cook</h2>
+                        </div>
+                        <div class="card-text">
+                            <p>
+                                <h3>Requirements for a Cook</h3>
+                                    <ul class="card-list">
+                                        <li><strong>Education</strong>: Cooking Related Graduate.</li>
+                                        <li><strong>Skills</strong>:
+                                            <ul>
+                                                <li>Can cook fast</li>
+                                                <li>Handle peak hours</li>
+                                                <li>Easy to get along with</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Personal Qualities</strong>:
+                                            <ul>
+                                                <li>Honest and trustworthy.</li>
+                                                <li>Friendly and polite.</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Physical Ability</strong>: Ability to windstand heat.</li>
+                                        <li><strong>Documents</strong>: NBI Clearance, Police Clearance</li>
+                                    </ul>
+                            </p>
+                        </div>
+                        <a href="#" class="btn btn-outline-primary">Apply Now</a><br>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="shadow">
+                <div class="card mb-5 shadow-sm">
+                    <img src="Images/waiter.jpg" class="img-fluid" alt="Waiter">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h2>Want to be part of the team? As a Waiter</h2>
+                        </div>
+                        <div class="card-text">
+                            <p>
+                                <h3>Requirements for a Waiter</h3>
+                                    <ul class="card-list">
+                                        <li><strong>Education</strong>: High school diploma or equivalent.</li>
+                                        <li><strong>Skills</strong>:
+                                            <ul>
+                                                <li>Handle many things at once</li>
+                                                <li>Good customer service skills.</li>
+                                                <li>Easy to get along with</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Personal Qualities</strong>:
+                                            <ul>
+                                                <li>Honest and trustworthy.</li>
+                                                <li>Friendly and polite.</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Physical Ability</strong>: Ability to handle things.</li>
+                                        <li><strong>Documents</strong>: NBI Clearance, Police Clearance</li>
+                                    </ul>
+                            </p>
+                        </div>
+                        <a href="#" class="btn btn-outline-primary">Apply Now</a><br>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="shadow">
+                <div class="card mb-5 shadow-sm">
+                    <img src="Images/dishwasher.png" class="img-fluid" alt="Cleaner/Dishwasher">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h2>Want to be part of the team? As a Dishwasher</h2>
+                        </div>
+                     <!-- Within the card element containing requirements -->
+                            <div class="card-text">
+                                <p>
+                                    <h3>Requirements for a Dishwasher</h3>
+                                    <ul class="card-list">
+                                        <li><strong>Education</strong>: High school diploma or equivalent.</li>
+                                        <li><strong>Skills</strong>:
+                                            <ul>
+                                                <li>Can clean dishes.</li>
+                                                <li>Do it in a fast.</li>
+                                                <li>Easy to get along with</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Personal Qualities</strong>:
+                                            <ul>
+                                                <li>Honest and trustworthy.</li>
+                                                <li>Friendly and polite.</li>
+                                                <li>Reliable</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Physical Ability</strong>: Ability to make yourself wet all day.</li>
+                                        <li><strong>Documents</strong>: NBI Clearance, Police Clearance</li>
+                                    </ul>
+                                </p>
+                            </div>
+                        <a href="#" class="btn btn-outline-primary">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="about-us" class="text-black text-center text-lg-start mt-4">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">About Us</h5>
+                    <p class="text-black">
+                        Krizzler News is your go-to source for the latest updates and in-depth coverage on a wide range of topics. Our dedicated team is committed to delivering high-quality journalism that informs and engages our readers.
+                    </p>
+                </div>
+                <div class="col-lg-6 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Contact Us</h5>
+                    <p class="text-black">
+                        Email: info@krizzlernews.com<br>
+                        Phone: +63 917 767 2643<br>
+                        Address: #32 Samson Rd, Caloocan, Metro Manila
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="text-center p-3 text-black">
+            &copy; 2024 Krizzler News. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector(".sidebar");
+            sidebar.style.display ="flex";
+        }
+        function closeSB(){
+            const sidebar = document.querySelector(".sidebar");
+            sidebar.style.display ="none";
+        }
+    </script>
+</body>
+</html>
